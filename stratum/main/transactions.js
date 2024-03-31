@@ -10,7 +10,7 @@ const Transactions = function (config, rpcData) {
 
   // Mainnet Configuration
   this.configMainnet = {
-    bech32: "bc",
+    bech32: "x1",
     bip32: {
       public: Buffer.from("0488B21E", "hex").readUInt32LE(0),
       private: Buffer.from("0488ADE4", "hex").readUInt32LE(0),
@@ -19,12 +19,12 @@ const Transactions = function (config, rpcData) {
     pubKeyHash: Buffer.from("29", "hex").readUInt8(0),
     scriptHash: Buffer.from("28", "hex").readUInt8(0),
     wif: Buffer.from("156", "hex").readUInt8(0),
-    coin: "x1c",
+    coin: "x1",
   };
 
   // Testnet Configuration
   this.configTestnet = {
-    bech32: "tb",
+    bech32: "tx1",
     bip32: {
       public: Buffer.from("043587CF", "hex").readUInt32LE(0),
       private: Buffer.from("04358394", "hex").readUInt32LE(0),
@@ -33,7 +33,7 @@ const Transactions = function (config, rpcData) {
     pubKeyHash: Buffer.from("39", "hex").readUInt8(0),
     scriptHash: Buffer.from("38", "hex").readUInt8(0),
     wif: Buffer.from("167", "hex").readUInt8(0),
-    coin: "x1c",
+    coin: "tx1",
   };
 
   // Calculate Generation Transaction
